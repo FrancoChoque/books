@@ -1,0 +1,11 @@
+.Logo {    
+  padding: 20px;
+  height: 100%;
+  box-sizing: border-box;    
+}
+
+@media(max-width: 600px) {
+  .Logo {
+      padding: 8px;
+  }
+}

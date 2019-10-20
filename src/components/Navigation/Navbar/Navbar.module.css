@@ -1,0 +1,39 @@
+.Navbar {
+  height: 100px;
+  width: 100%;    
+  display: flex;
+  z-index: 1000;
+  padding: 10px;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #7832b8, #4b00a0);
+}
+
+.Navbar nav {
+  height: 100%;
+}
+
+.Logo {
+  height: 100%;    
+}
+
+@media (max-width: 1000px) {
+  .desktopOnly {
+      display: none;
+  }
+  .Navbar {        
+      justify-content: space-between;        
+  }
+}
+
+@media(max-width: 600px) {
+  .Navbar {        
+      justify-content: space-between;        
+      height: 80px;
+      padding: 5px
+  }
+  .Logo {
+      height: 50px;
+      left: 0;
+  }
+}
