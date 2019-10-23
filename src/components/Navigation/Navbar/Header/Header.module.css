@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #4850bb;
+  background-color: var(--colors-primary);;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,5 +27,6 @@
   }
   .MobileOnly {
     display: initial;
+    height: 100%;
   }
 }

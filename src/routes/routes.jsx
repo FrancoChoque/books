@@ -1,11 +1,21 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import Home from '../pages/Home/Home';
+import HomePage from '../pages/Home/HomePage';
+import SignInPage from '../pages/SignIn/SignInPage';
+import SignUpPage from '../pages/SignUp/SignUpPage';
 
 const Routes = () => (
-  <Route path="/">
-    <Home />
-  </Route>
+  <>
+    <Route path="/">
+      <HomePage />
+    </Route>
+    <Route path="/signIn">
+      <SignInPage />
+    </Route>
+    <Route path="/signUp">
+      <SignUpPage />
+    </Route>
+  </>
 );
 
 export default Routes;

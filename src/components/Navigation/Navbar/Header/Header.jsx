@@ -4,7 +4,7 @@ import styles from './Header.module.css';
 import DrawerToggle from './DrawerToggle/DrawerToggle';
 
 const Header = (props) => {
-  const { drawerToggleClick, items } = props;
+  const { drawerToggleClick, children } = props;
   return (
     <header className={styles.Header}>
       {/* <div className={styles.Logo}>
@@ -14,7 +14,7 @@ const Header = (props) => {
         <DrawerToggle clicked={drawerToggleClick} />
       </div>
       <nav className={styles.DesktopOnly}>
-        {items}
+        {children}
       </nav>
     </header>
   );
@@ -22,12 +22,12 @@ const Header = (props) => {
 
 Header.propTypes = {
   drawerToggleClick: PropTypes.func,
-  items: PropTypes.node,
+  children: PropTypes.node,
 };
 
 Header.defaultProps = {
   drawerToggleClick: () => {},
-  items: null,
+  children: null,
 };
 
 export default Header;

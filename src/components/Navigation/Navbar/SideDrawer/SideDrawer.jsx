@@ -6,7 +6,9 @@ import Logo from '../../Logo/Logo';
 
 const SideDrawer = (props) => {
   let attachedClasses = [styles.SideDrawer, styles.Close];
-  const { closed, items, logo, opened } = props;
+  const {
+    closed, children, logo, opened,
+  } = props;
   if (opened) {
     attachedClasses = [styles.SideDrawer, styles.Open];
   }
@@ -18,7 +20,7 @@ const SideDrawer = (props) => {
           <Logo href='/' uri={logo} />
         </div> */}
         <nav>
-          {items}
+          {children}
         </nav>
       </div>
     </>
@@ -28,14 +30,14 @@ const SideDrawer = (props) => {
 SideDrawer.defaultProps = {
   opened: false,
   closed: null,
-  items: null,
+  children: null,
   logo: '',
 };
 
 SideDrawer.propTypes = {
   opened: PropTypes.bool,
   closed: PropTypes.func,
-  items: PropTypes.node,
+  children: PropTypes.node,
   logo: PropTypes.string,
 };
 
